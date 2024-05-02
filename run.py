@@ -7,12 +7,12 @@ Created on Sun Apr 28 01:18:17 2024
 TODO: GET BASIC WEBSITE SET UP (home page) AND GIT
 
 """
-from flask import Flask
-app = Flask(__name__)
+import flask
+app = flask.Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "Hello World!"
+    return flask.render_template("home.html")   
 
 if __name__ == "__main__":
     app.run(host="localhost", port=5000)
